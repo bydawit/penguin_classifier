@@ -1,5 +1,5 @@
 import pandas as pd
-penguins = pd.read_csv('penguins_cleansed.csv')
+penguins = pd.read_csv('penguins_cleaned.csv')
 
 # Ordinal feature encoding
 # https://www.kaggle.com/pratik1120/penguin-dataset-eda-classification-and-clustering
@@ -28,7 +28,7 @@ Y = df['species']
 # Build Random forest model
 from sklearn.ensemble import RandomForestClassifier
 clf = RandomForestClassifier()
-clf.fir(X, Y)
+clf.fit(X, Y)
 
 # Saving the model
 import pickle
